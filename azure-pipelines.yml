@@ -6,8 +6,9 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
 
 steps:
 - script: echo Hello, world!
